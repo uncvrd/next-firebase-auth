@@ -1,6 +1,6 @@
 import * as Cookies from 'cookies'
 import type Firebase from 'firebase'
-import * as firebaseAdmin from 'firebase-admin'
+// import * as firebaseAdmin from 'firebase-admin'
 import type {
   GetServerSidePropsContext,
   GetServerSidePropsResult,
@@ -104,6 +104,12 @@ interface FirebaseAdminType extends firebaseAdmin.app.App {
   app: firebaseAdmin.app.App
   delete: undefined
   credential: firebaseAdmin.credential.Credential
+}
+
+interface FirebaseAdminType {
+  app: undefined
+  delete: undefined
+  credential: undefined
 }
 
 export const getFirebaseAdmin: () => FirebaseAdminType
